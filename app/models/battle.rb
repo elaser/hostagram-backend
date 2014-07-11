@@ -15,7 +15,9 @@ class Battle < ActiveRecord::Base
 	private
 	def tally
 		winner.wins = winner.wins + 1
+		winner.score = winner.score + 1
 		loser.losses = loser.losses + 1
+		loser.score = loser.score - 1
 
 		winner.save
 		loser.save
