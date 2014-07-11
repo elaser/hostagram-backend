@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  user_id: 1
+  wins: 1
+  losses: 1
+
+two:
+  username: MyString
+  user_id: 1
+  wins: 1
+  losses: 1
