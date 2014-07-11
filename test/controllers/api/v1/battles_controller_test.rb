@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Apii::V1::TrackControllerTest < ActionController::TestCase
+class Api::V1::BattlesControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

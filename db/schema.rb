@@ -11,16 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140711023132) do
+ActiveRecord::Schema.define(version: 20140711035454) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "battles", force: true do |t|
+    t.integer  "winner_id"
+    t.integer  "loser_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "contestants", force: true do |t|
-    t.string   "username"
-    t.integer  "user_id"
-    t.integer  "wins"
-    t.integer  "losses"
+    t.string   "username",   default: ""
+    t.integer  "user_id",    default: 0
+    t.integer  "wins",       default: 0
+    t.integer  "losses",     default: 0
+    t.string   "full_name",  default: ""
     t.datetime "created_at"
     t.datetime "updated_at"
   end
